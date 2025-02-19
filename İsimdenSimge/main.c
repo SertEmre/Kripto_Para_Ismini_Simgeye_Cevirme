@@ -112,7 +112,7 @@ const char *kripto_paralar[][2] = {
     {"Celo", "CELO"}
 };
 
-// Girişi küçük harfe dönüştür
+// GiriÃ¾i kÃ¼Ã§Ã¼k harfe dÃ¶nÃ¼Ã¾tÃ¼r
 void kucuk_harfe_donustur(char str[]) {
     for (int i = 0; str[i]; i++) {
         str[i] = tolower(str[i]);
@@ -125,18 +125,18 @@ int main() {
     printf("Kripto para ismini girin (Orneginb: Bitcoin): ");
     scanf("%s", kullanici_girdisi);
 
-    kucuk_harfe_donustur(kullanici_girdisi);  // Kullanıcının girişini küçük harfe dönüştür
+    kucuk_harfe_donustur(kullanici_girdisi);  // KullanÃ½cÃ½nÃ½n giriÃ¾ini kÃ¼Ã§Ã¼k harfe dÃ¶nÃ¼Ã¾tÃ¼r
 
     int bulundu = 0;
     for (int i = 0; i < 100; i++) {
-        // Kripto para ismini küçük harfe dönüştür
+        // Kripto para ismini kÃ¼Ã§Ã¼k harfe dÃ¶nÃ¼Ã¾tÃ¼r
         char kripto_isim[MAKS_ISIM_UZUNLUGU];
         strcpy(kripto_isim, kripto_paralar[i][0]);
         kucuk_harfe_donustur(kripto_isim);
 
-        // Girişin ve kripto isminin karşılaştırılması
+        // GiriÃ¾in ve kripto isminin karÃ¾Ã½laÃ¾tÃ½rÃ½lmasÃ½
         if (strstr(kripto_isim, kullanici_girdisi) != NULL) {
-            printf("%s için simge: %s\n", kripto_paralar[i][0], kripto_paralar[i][1]);
+            printf("%s icin simge: %s\n", kripto_paralar[i][0], kripto_paralar[i][1]);
             bulundu = 1;
             break;
         }
