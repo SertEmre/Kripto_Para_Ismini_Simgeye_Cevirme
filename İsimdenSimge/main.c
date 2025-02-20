@@ -112,7 +112,7 @@ const char *kripto_paralar[][2] = {
     {"Celo", "CELO"}
 };
 
-// Giriþi küçük harfe dönüþtür
+// Girişi küçük harfe dönüþtür
 void kucuk_harfe_donustur(char str[]) {
     for (int i = 0; str[i]; i++) {
         str[i] = tolower(str[i]);
@@ -122,7 +122,7 @@ void kucuk_harfe_donustur(char str[]) {
 int main() {
     char kullanici_girdisi[MAKS_ISIM_UZUNLUGU];
 
-    printf("Kripto para ismini girin (Orneginb: Bitcoin): ");
+    printf("Kripto para ismini girin (Ornegin: Bitcoin): ");
     scanf("%s", kullanici_girdisi);
 
     kucuk_harfe_donustur(kullanici_girdisi);  // Kullanýcýnýn giriþini küçük harfe dönüþtür
