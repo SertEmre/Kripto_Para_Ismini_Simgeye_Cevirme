@@ -134,7 +134,7 @@ int main() {
         strcpy(kripto_isim, kripto_paralar[i][0]);
         kucuk_harfe_donustur(kripto_isim);
 
-        // Giriþin ve kripto isminin karþýlaþtýrýlmasý
+        // Girişin ve kripto isminin karşılaştırılması
         if (strstr(kripto_isim, kullanici_girdisi) != NULL) {
             printf("%s icin simge: %s\n", kripto_paralar[i][0], kripto_paralar[i][1]);
             bulundu = 1;
